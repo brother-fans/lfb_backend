@@ -1,0 +1,15 @@
+*.pyc
+*.class
+node_modules/
+dist/
+var/
+
+*.egg
+*.egg-info/
+*.manifest
+*.cache
+cache/
+
+*.log
+venv/
+migrations/
