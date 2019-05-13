@@ -10,20 +10,20 @@ Any questions? Contact awesome devs!
 
 ---
 
-- [lfb_backend](lovefreshbee)
+- [lfb_backend](#lovefreshbee)
 
-  - [Installation](installation)
-  - [Run](run)
-    - [Local Dev](local-dev)
-    - [Development](development)
-    - [Test](test)
-    - [Production](Production)
-  - [Project Structure](project-structure)
-  - [Tests](tests)
-    - [Unit Test](unit-test)
-    - [Functional Test](functional-test)
-    - [Integration Test](integration-test)
-  - [Supporting Team](supporting-team)
+  - [Installation](#installation)
+  - [Run](#run)
+    - [Local Dev](#local-dev)
+    - [Development](#development)
+    - [Test](#test)
+    - [Production](#Production)
+  - [Project Structure](#project-structure)
+  - [Tests](#tests)
+    - [Unit Test](#unit-test)
+    - [Functional Test](#functional-test)
+    - [Integration Test](#integration-test)
+  - [Supporting Team](#supporting-team)
 
   
 
@@ -43,3 +43,53 @@ $ pip install -r requirements.txt
 $ python lfb_backend/manage.py runserver --settings=config.settings.local
 ```
 
+if you have your own config script
+
+ ```bash
+$ touch lfb_backend/config/settings/local_{yourinitials}.py
+
+# create your own config file
+
+$ vim lfb_backend/config/settings/local_{yourinitials}.py
+
+# add your own configs
+
+$ python lfb_backend/manage.py runserver --settings=config.settings.local_{yourinitials}
+ ```
+
+### Development
+
+```bash
+$ python lfb_backend/manage.py runserver --settings=config.settings.dev 
+```
+
+### Test
+
+```bash
+$ python lfb_backend/manage.py runserver --settings=config.settings.test
+```
+
+### Production
+
+```bash
+$ python lfb_backend/manage.py runserver --settings=config.settings.prod
+```
+
+## Project Structure
+
+## Tests
+
+### Unit Test
+
+### Functional Test
+
+### Integration Test
+
+## Supporting Team
+
+- cjl 1258040085@qq.com
+- zy
+- yhc
+- lyb
+- fjj
+- wqm
