@@ -2,7 +2,7 @@
 纪念程序员生涯中第一个项目
 后续我会补上一些文档，可以协作开发练习一个项目
 
-Tips: checkout the [API Documentation](https://github.com/brother-fans/lfb.github.io.wiki.git) first
+Tips: checkout the [API Documentation](https://github.com/brother-fans/lfb_backend/wiki) first
 
 Any questions? Contact awesome devs!
 
