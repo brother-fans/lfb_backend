@@ -13,3 +13,8 @@ cache/
 *.log
 venv/
 migrations/
+
+.idea
+.vscode
+.DS_Store
+
