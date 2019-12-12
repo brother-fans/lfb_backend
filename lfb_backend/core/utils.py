@@ -31,9 +31,10 @@ class Validators:
             verbose_note (str): Defaults to ''. 参数说明
 
         Returns:
+            any: 参数取值
             bool: 是否有效
             str: 验证信息
-            any: 参数取值
+
         """
 
         valid = True
