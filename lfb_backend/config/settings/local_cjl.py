@@ -9,11 +9,19 @@ DEBUG = True
 
 DATABASES = {
     'default': {
-        'ENGINE': '',
-        'NAME': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'lfb_backend',
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
         'PORT': ''
-    }
+    },
+    'mysql': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'lfb_backend',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
+        'PORT': '3306'
+    },
 }

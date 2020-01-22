@@ -1,6 +1,11 @@
 import logging
-from logging import handlers
+import sys
+
 from django.conf import settings
+from logging import handlers
+from loguru import logger
+
+from log.constants import STDOUT_FORMAT
 
 
 class Logger:
@@ -33,4 +38,24 @@ class Logger:
         self.logger.info(msg, *args, **kwargs)
 
 
+class LXLogger:
+
+    stdout_handler_id = logger.add(sys.stdout,
+                                   format=STDOUT_FORMAT,
+                                   catch=False)
+
+    def __init__(self):
+        self.logger = logger.bind()
+
+    def error(self, *args, **kwargs):
+        self.logger.error(*args, **kwargs)
+
+    def info(self, *args, **kwargs):
+        self.logger.info(*args, **kwargs)
+
+    def debug(self, *args, **kwargs):
+        self.logger.debug(*args, **kwargs)
+
+
 log = Logger('./log_file/llx_log')
+lx_log = LXLogger()

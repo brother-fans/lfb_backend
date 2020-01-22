@@ -4,10 +4,7 @@ from django.contrib.auth.models import (AbstractBaseUser,
                                         UserManager)
 
 from account.lfb_account.querysets import AccountQuerySet
-from core.behaviors import (Informable,
-                            Timestampable,
-                            Operatable,
-                            SoftDeletable)
+from core.behaviors import Timestampable, Operatable
 
 
 class User(Timestampable,

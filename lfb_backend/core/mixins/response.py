@@ -1,7 +1,7 @@
 """通用Http Response处理模块
 """
-
-from django.http import JsonResponse, HttpResponse
+from any_case import converts_keys
+from django.http import HttpResponse, JsonResponse
 
 
 class ResponseMixin:
@@ -56,12 +56,18 @@ class ResponseMixin:
         kwargs['success'] = self.success
         kwargs['status'] = self.status
         kwargs['msg'] = self.msg
-        kwargs['data'] = None if not args else args[0]
+        kwargs['data'] = (None
+                          if not args
+                          else converts_keys(args[0], case='camel'))
 
         return JsonResponse(kwargs)
 
     def get_download_response(self, file_name, file_type):
         """获取csv Response
+
+        Args:
+            file_name (str): 文件名
+            file_type (object, optional): 文件类型
         """
         resp = HttpResponse(content_type='text/csv')
         resp['Content-Disposition'] = ('attachment; filename="{}.{}"'

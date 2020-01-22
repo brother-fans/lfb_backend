@@ -35,8 +35,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'silk',
     # my app
     'account.lfb_account',
+    'account.permission_mgmt',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'core.middlewares.LoginRequiredMiddleware',
+    'silk.middleware.SilkyMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -118,5 +121,10 @@ AUTHENTICATION_BACKENDS = (
 LOGIN_EXEMPT_URLS = (
     r'~$',
     r'^api/v1/login$',
-    r'^admin'
+    r'^admin',
+    r'^silk/'
 )
+
+SILKY_PYTHON_PROFILER = True
+SILKY_PYTHON_PROFILER_BINARY = True
+SILKY_PYTHON_PROFILER_RESULT_PATH = os.path.join(BASE_DIR, 'profiles/')
