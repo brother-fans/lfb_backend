@@ -3,6 +3,7 @@
 
 from django.db import models
 
+
 class Timestampable(models.Model):
     """添加日期行为
     """
@@ -65,3 +66,12 @@ class SoftDeletable(models.Model):
 
     class Meta:
         abstract = True
+        
+        
+class Modifiable(models.Model):
+    """添加修改者信息行为"""
+
+    modifier = models.CharField(
+        max_length=50,
+        verbose_name='记录修改者用户名',
+        help_text='用户名')

@@ -14,12 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf import settings
 from django.conf.urls import include, url
+from django.conf.urls.static import static
 
 import account.lfb_account.urls as lfb_account_urls
+import account.permission_mgmt.urls as permission_mgmt_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'api/v1', include(lfb_account_urls)),
-]
-
+    url(r'^silk/', include('silk.urls', namespace='silk')),
+    url(r'^api/v1/', include(lfb_account_urls)),
+    url(r'^api/v1/', include(permission_mgmt_urls)),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -40,7 +40,9 @@ class Logger:
 
 class LXLogger:
 
-    stdout_handler_id = logger.add(sys.stdout, format=STDOUT_FORMAT, catch=False)
+    stdout_handler_id = logger.add(sys.stdout,
+                                   format=STDOUT_FORMAT,
+                                   catch=False)
 
     def __init__(self):
         self.logger = logger.bind()

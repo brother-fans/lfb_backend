@@ -1,10 +1,11 @@
-# lovefreshbee
+# love_fresh_bee
+
 纪念程序员生涯中第一个项目
 后续我会补上一些文档，可以协作开发练习一个项目
 
 Tips: checkout the [API Documentation](https://github.com/brother-fans/lfb_backend/wiki) first
 
-Any questions? Contact awesome devs!
+Any questions? Contact awesome dev!
 
 - 1258040085@qq.com
 
@@ -25,8 +26,6 @@ Any questions? Contact awesome devs!
     - [Integration Test](#integration-test)
   - [Supporting Team](#supporting-team)
 
-  
-
 ## Installation
 
 **Python Version:3.5+**
@@ -46,21 +45,21 @@ $ python lfb_backend/manage.py runserver --settings=config.settings.local
 if you have your own config script
 
  ```bash
-$ touch lfb_backend/config/settings/local_{yourinitials}.py
+$ touch lfb_backend/config/settings/local_{your_initials}.py
 
 # create your own config file
 
-$ vim lfb_backend/config/settings/local_{yourinitials}.py
+$ vim lfb_backend/config/settings/local_{your_initials}.py
 
 # add your own configs
 
-$ python lfb_backend/manage.py runserver --settings=config.settings.local_{yourinitials}
+$ python lfb_backend/manage.py runserver --settings=config.settings.local_{your_initials}
  ```
 
 ### Development
 
 ```bash
-$ python lfb_backend/manage.py runserver --settings=config.settings.dev 
+$ python lfb_backend/manage.py runserver --settings=config.settings.dev
 ```
 
 ### Test
